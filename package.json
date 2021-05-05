@@ -1,0 +1,29 @@
+{
+  "name": "emerging-media-world-map",
+  "version": "1.0.0",
+  "description": "A web map that plots emerging media institutions all over the world",
+  "main": "index.js",
+  "scripts": {
+    "start": "vercel dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yz3440/emerging-media-world-map.git"
+  },
+  "author": "yufeng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yz3440/emerging-media-world-map/issues"
+  },
+  "homepage": "https://github.com/yz3440/emerging-media-world-map#readme",
+  "dependencies": {
+    "airtable": "^0.10.1",
+    "http-status-codes": "^2.1.4"
+  },
+  "devDependencies": {
+    "@vercel/node": "^1.9.0",
+    "webpack": "^5.21.1",
+    "webpack-cli": "^4.5.0"
+  }
+}

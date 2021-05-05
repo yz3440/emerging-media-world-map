@@ -1,0 +1,185 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: black;
+}
+
+.black-border {
+    border: 8px solid black;
+}
+
+#title {
+    padding: 12px;
+    border: 8px solid black;
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.5em;
+    border-bottom: none;
+}
+
+#search-box-container {
+    border: 8px solid black;
+    border-right: none;
+    border-top: none;
+    width: calc(240px + 8px + 8px);
+}
+
+#search-instruction {
+    font-family: 'Source Sans Pro', sans-serif;
+    border-bottom: 8px solid black;
+}
+
+#inline-filters {
+    padding: 6px;
+    border: 8px solid black;
+    border-bottom: none;
+}
+
+#name-adding {
+    width: 100%;
+}
+
+#description-adding {
+    width: 100%;
+    resize: none;
+}
+
+#map {
+    border: 8px solid black;
+}
+
+/* 
+#filterResults {
+    font-size: 12px;
+    color: white;
+    background-color: #448EE4;
+} */
+
+
+#listings {
+    border: 8px solid black;
+    border-top: 8px dashed black;
+    border-bottom: none;
+}
+
+
+.academic-label {
+    background-color: yellow
+}
+
+.space-label {
+    background-color: greenyellow
+}
+
+.event-label {
+    background-color: skyblue
+}
+
+.other-label {
+    background-color: silver
+}
+
+input:checked+.checkbox {
+    background-color: black;
+}
+
+.theme {
+    background-color: white;
+}
+
+.select {
+    font-style: italic;
+    opacity: .7;
+}
+
+.mapboxgl-ctrl-geocoder--input {
+    padding: 6px 30px;
+    margin-left: 5px;
+}
+
+.listings .item {
+    font-size: 14px;
+    word-wrap: break-word;
+    text-decoration: none;
+    border-bottom: solid rgb(0, 0, 0, .3) 2px;
+    padding: 5px;
+}
+
+.listings .item:last-child {
+    border-bottom: none;
+}
+
+.listings .item .title {
+    display: inline-block;
+    width: 100%;
+    color: black;
+    font-weight: 800;
+    margin-top: 5px;
+    text-decoration: underline;
+}
+
+.title {
+    display: inline-block;
+    width: 100%;
+    color: black;
+    font-weight: 800;
+    margin-top: 5px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 3px;
+    border-left: 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background: #AAAAAA;
+}
+
+
+.clearfix {
+    display: block;
+}
+
+.clearfix::after {
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.mapboxgl-popup-content {
+    font: 400 15px/20px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+    text-align: left;
+    padding-bottom: 10px;
+    width: 240px;
+
+}
+
+.mapboxgl-popup-close-button {
+    display: none;
+}
+
+.mapboxgl-popup-content a {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.mapboxgl-popup-content h3 {
+    color: black;
+    font-weight: 500;
+    font-size: larger;
+    margin: 0;
+    margin-bottom: 0.2em;
+    display: block;
+
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="An open map for emerging media instutions from all over the world.">
+    <meta name="keywords" content="Emerging Media, New Media, Map">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+
+
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/32x32.png" />
+
+    <title>Emerging Media Institutions World Map</title>
+
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700&display=swap"
+        rel="stylesheet">
+    <link href="https://api.mapbox.com/mapbox-assembly/v0.24.0/assembly.min.css" rel="stylesheet" />
+    <script src="https://api.mapbox.com/mapbox-assembly/v0.24.0/assembly.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css" rel="stylesheet" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.min.js">
+    </script>
+    <link rel="stylesheet"
+        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.css"
+        type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@5/turf.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="flex-parent viewport-full relative scroll-hidden">
+        <div id="sidebar"
+            class="flex-child flex-parent flex-parent--column w-full w360-ml absolute static-ml viewport-full-ml viewport-half left bottom">
+            <h3 id="title" class=" flex-child txt-l-ml txt-m txt-bold mr0-ml align-center block"></h3>
+            <div id="inline-filters" class="flex-child "></div>
+            <div id="listings" class="flex-child px12 listings scroll-auto h-full"></div>
+            <div id="data-source" class="h60 black-border">
+            </div>
+
+        </div>
+        <div class="flex-child flex-child--grow w-auto viewport-full-ml viewport-half" id="map">
+            <div id='search-box-container' class="absolute right top bg-white z1">
+                <h3 id="search-instruction" class="flex-child txt-m txt-bold mr0-ml align-center block">
+                    to add institutions to this map
+                </h3>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+<script></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+
+</html>
