@@ -1,9 +1,8 @@
-import Airtable from 'airtable';
-import Status from 'http-status-codes';
+import Airtable from "airtable";
+import Status from "http-status-codes";
 
 const apiKey = process.env.AIRTABLE_API_KEY;
 const baseURL = process.env.AIRTABLE_BASE_URL;
-console.log(apiKey, baseURL);
 
 const getAirtableTable = (tableName) => {
   const base = new Airtable({ apiKey: apiKey }).base(baseURL);
@@ -15,10 +14,10 @@ const getGeoJSONFromRecords = (records) => {
   let recordFeatures = records.map((record, i) => {
     let recordFields = record.fields;
     let recordFeature = {
-      type: 'Feature',
+      type: "Feature",
       geometry: {
         coordinates: [recordFields.Longitude, recordFields.Latitude],
-        type: 'Point',
+        type: "Point",
       },
       properties: { ...recordFields, id: i },
     };
@@ -26,7 +25,7 @@ const getGeoJSONFromRecords = (records) => {
   });
 
   let geojson = {
-    type: 'FeatureCollection',
+    type: "FeatureCollection",
     features: recordFeatures,
   };
   return geojson;
@@ -34,9 +33,9 @@ const getGeoJSONFromRecords = (records) => {
 
 export default async (req, res) => {
   switch (req.method) {
-    case 'GET':
+    case "GET":
       try {
-        const table = getAirtableTable('Institutions');
+        const table = getAirtableTable("Institutions");
         const records = await table.select().all();
         const geojson = getGeoJSONFromRecords(records);
         res.status(Status.OK).json(geojson);
@@ -44,9 +43,9 @@ export default async (req, res) => {
         res.status(err.statusCode).send(err);
       }
       break;
-    case 'POST':
+    case "POST":
       try {
-        const table = getAirtableTable('Institutions');
+        const table = getAirtableTable("Institutions");
         const newRecord = { fields: req.body };
         table.create([newRecord], (err, records) => {
           if (err) {
