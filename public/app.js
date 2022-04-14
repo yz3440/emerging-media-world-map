@@ -87,6 +87,20 @@ function main() {
 
     function initWithGeoJSON(geojson) {
       geojsonData = geojson;
+
+      // filter out non-confirmed ones
+      console.log('filtering out non-confirmed ones:');
+      // print out non-confirmed ones
+      const nonConfirmed = geojsonData.features
+        .filter((d) => !d.properties.Confirmed)
+        .map((d) => d.properties);
+      console.log(nonConfirmed);
+
+      // actual filtering
+      geojsonData.features = geojsonData.features.filter(
+        (d) => d.properties.Confirmed
+      );
+
       map.addLayer({
         id: 'locationData',
         type: 'symbol',
